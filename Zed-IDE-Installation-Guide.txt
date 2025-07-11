@@ -1,0 +1,12 @@
+Zed IDE Installation Guidance
+=============================
+a) To install the Zed IDE package -
+      $ curl -f https://zed.dev/install.sh | sh
+
+b) To run Zed from your terminal, you must add ~/.local/bin to your PATH
+   Command:
+      $ echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc
+      $ source ~/.bashrc
+c) To run the ide, 
+      $ '~/.local/bin/zed'
+
