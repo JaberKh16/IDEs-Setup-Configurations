@@ -1,0 +1,22 @@
+Vim Terminal Learning Materials
+===============================
+
+Mode Commands
+--------------
+i   -> enter into writing mode
+esc -> escap from any mode
+
+
+Moving Line Commands
+--------------------
+o          -> next line cursor + insert mode
+h	   -> left line 
+l          -> right line
+k          -> upper line
+j          -> below line
+
+
+shift + o  -> next line cursor + insert mode
+shift + i  -> start of line cursor + insert mode
+shift + a  -> end of line cursor + insert mode
+shift + o  -> open new line above cursor + insert mode
