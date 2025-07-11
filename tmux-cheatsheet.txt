@@ -1,0 +1,117 @@
+Tmux Learning Concepts
+======================
+Start a new [session_name]
+$ tmux
+
+Start a new named session:
+$ tmux new -s [session_name]
+
+Start and attach existing session with it:
+$ tmux new -A -s [session_name]
+
+
+Show all sessions:
+$ tmux ls
+
+# Attach session
+
+Attach to last session:
+$ tmux a
+
+Attach to specific session:
+$ tmux a -t [session_name]
+
+
+# Rename Session
+$ tmux rename-session -t [previous_session_name] [new_session_name]
+
+
+# Kill session
+
+Kill a session by name:
+$ tmux kill-ses -t [session_name]
+
+Kill sessions but the current:
+$ tmux kill-ses -a
+
+Kill sessions but '[session_name]'
+$ tmux kill-ses -a -t [session_name]
+
+
+
+Tmux Help
+$ tmux info
+
+# Config
+Reload config
+$ tmux source-file ~/.tmu­x.conf
+
+Show Config
+$ tmux show-options -g
+
+
+
+# Copy Mode
+Ctrl+b [	Enter copy mode
+<Space>	Start selecting
+Enter	Copy selection
+q	Quit copy mode
+Ctrl+b ]	Paste contents of buffer_0
+Mainly works like selecting text in Vim
+
+
+
+Tmux Shortcuts Keys:
+===================
+
+Shortcuts	Description
+=========       ===========
+Ctrl+b ?	List all shortcuts
+
+Show every session, window, pane, etc.
+$ tmux info
+
+# Panes (Splits)
+Ctrl+b " / %	Split Horiz/Vert
+Ctrl+b !	Pane -> Window
+Ctrl+b x	Kill pane
+Ctrl+b <Arrow>	Navigate panes
+Ctrl+b <Space>	Toggle layouts
+Ctrl+b { / }	Move to Left/Right
+Ctrl+b o	Goto next panes
+Ctrl+b z	toggle full-screen
+Ctrl+b ;	Toggle Last pane
+Ctrl+b q	Show numbers
+Ctrl+b q 0...9	Goto # panes
+
+# Default Panes
+Ctrl + b + Alt + 0...5  # individualpane layout
+
+# Window (Tabs)
+Ctrl+b c	Create window
+Ctrl+b p / n	Previous/Next window
+Ctrl+b " / %	Split Horiz/Vert
+Ctrl+b w	List window
+Ctrl+b ,	Rename window
+Ctrl+b f	Find window
+Ctrl+b l	Last window
+Ctrl+b .	Move window
+Ctrl+b &	Close window
+Ctrl+b 0...9	Goto # window
+Session (Set of Windows)
+Ctrl+b d	Detach from session
+Ctrl+b s	Show all sessions
+Ctrl+b $	Rename session
+Ctrl+b ( / )	Previous/Next session
+#Tmux Command Mode
+
+# Usage
+Ctrl+b :	Enter command mode
+Resizing
+resize-pane -D 20	Resize down
+resize-pane -U 20	Resize up
+resize-pane -L 20	Resize left
+resize-pane -R 20	Resize right
+
+# Listing
+list-keys	All commands
