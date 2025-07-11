@@ -1,0 +1,26 @@
+Sublime Text Necessary Plugins
+==============================
+1) Emmet
+2) Terminus    ==> key --> ctrl+alt+f
+3) Auto Close Tag
+4) SublimeCodeIntel 
+5) Material Theme
+6) AdvanceNewFile ==> key -> super+alt+n
+7) DocBlocker ==> /** then hit tab
+
+
+Configuration Setup
+===================
+"color_scheme": "GitHub Dark.sublime-color-scheme"
+// "font_face": "Nimbus Mono PS",
+"font_face": "Jetbrains Mono",
+"font_size": 10,
+"theme": "GitHub Dark.sublime-theme",
+"save_on_focus_lost" : true,
+"hightlight_line": true,
+"highlight_line_number": true,
+"caret_style": "phase",
+"line_padding_bottom": 8,
+"line_padding_top": 8,
+"trim_trailing_white_space_on_save": true,
+"word_wrap": false,
