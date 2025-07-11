@@ -1,0 +1,99 @@
+{
+  "tabnine.experimentalAutoImports": false,
+  "workbench.iconTheme": "eq-material-theme-icons-ocean",
+  "explorer.confirmDelete": false,
+  "eslint.codeActionsOnSave.rules": null,
+  "window.zoomLevel": 3,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "workbench.settings.applyToAllProfiles": [],
+  "reactSnippets.settings.importReactOnTop": false,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorStyleInactive": "line",
+  "editor.cursorSmoothCaretAnimation": "on",
+
+  // config related to code formatting - prettier and eslint
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": null
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "eslint.alwaysShowStatus": true,
+  "editor.fontFamily": "Dank Mono, Fira Code, Menlo, Monaco, 'Courier New', monospace",
+  "git.openRepositoryInParentFolders": "never",
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "monospace",
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "git.autofetch": true,
+  "dotnet.preferCSharpExtension": true,
+  "dotnet.server.useOmnisharp": true,
+  "intellicode-completions-cdk.loggingLevel": "ALL",
+  "terminal.explorerKind": "both",
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  },
+  "workbench.colorTheme": "Best Themes - Karma",
+  "editor.minimap.enabled": false,
+
+  // activity bar
+  "workbench.activityBar.location": "default", // to hide left activity bar
+  "workbench.statusBar.visible": false, // to hide below status bar
+  "workbench.activityBar.iconClickBehavior": "focus",
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "workbench.editor.showTabs": "multiple", // to show tabs in editor
+  "workbench.sideBar.location": "right", // to set the sidebar to right
+
+  "workbench.tree.enableStickyScroll": true, // tree folder name as sticky
+  "workbench.tree.renderIndentGuides": "none", // to hide the extra bars on folder tree
+  "workbench.tree.indent": 8, // default is 8
+
+  "explorer.compactFolders": false, // to show nested folders inside
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+
+  "breadcrumbs.enabled": false, // hide breadcrumbs
+
+  // adjust scrollbar
+  "editor.scrollbar.horizontalScrollbarSize": 4,
+  "editor.scrollbar.verticalScrollbarSize": 2,
+
+  // adjust cursor blink
+  "editor.cursorStyle": "line-thin",
+  "editor.cursorBlinking": "blink",
+  "editor.cursorWidth": 10,
+  "editor.cursorSmoothCaretAnimation": "on",
+
+  // extension recommendation
+  "extensions.ignoreRecommendations": false,
+
+  // ui customize
+  "window.titleBarStyle": "native",
+  "window.customTitleBarVisibility": "never",
+
+  "apc.electron": {
+    "titleBarStyle": "hidden"
+  },
+
+  "apc.stylesheet": {
+    // ".monaco-workbench .part.editor>.content .editor-group-container>.title div.tabs-container": "border-radius: 5px; font-family: 'Times New Roman', Times, serif;",
+    // "body": {
+    //   // Other panels have to be transparent for this. See "workbench.colorCustomizations"
+    //   "background-image": "url(/Users/aleksandarpopovic/imgs/19.png), linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2))",
+    //   "background-size": "cover",
+    //   "background-blend-mode": "multiply",
+    //   "background-repeat": "no-repeat"
+    // },
+    // "workbench.colorCustomizations": {
+    //   "sideBar.background": "#00000000", // transparent
+    //   "editor.background": "#00000000"
+    // }
+  }
+}
+
