@@ -1,0 +1,33 @@
+
+# jandedobekker theme
+oh-my-posh init pwsh --config /home/jaber/.cache/oh-my-posh/themes/jandedobbeleer.omp.json | Invoke-Expression
+
+# honukai theme
+# oh-my-posh init pwsh --config ~/.cache/oh-my-posh/themes/honukai.omp.json | Invoke-Expression
+
+# paradox theme
+# oh-my-posh init pwsh --config /home/jaber/.cache/oh-my-posh/themes/paradox.omp.json | Invoke-Expression
+
+# blue-owl theme
+# oh-my-posh init pwsh --config /home/jaber/.cache/oh-my-posh/themes/blue-owl.omp.json | Invoke-Expression
+
+
+# cleaned-detialed theme
+# oh-my-posh init pwsh --config /home/jaber/.cache/oh-my-posh/themes/cleaned-detialed.omp.json | Invoke-Expression
+
+
+# kushal theme
+# oh-my-posh init pwsh --config /home/jaber/.cache/oh-my-posh/themes/kushal.omp.json | Invoke-Expression
+
+
+# powerlevel10k_rainbow theme
+# oh-my-posh init pwsh --config /home/jaber/.cache/oh-my-posh/themes/powerlevel10k_rainbow.omp.json | Invoke-Expression
+
+
+# quick-term theme
+# oh-my-posh init pwsh --config /home/jaber/.cache/oh-my-posh/themes/quick-term.omp.json | Invoke-Expression
+
+# wholespace theme
+# oh-my-posh init pwsh --config /home/jaber/.cache/oh-my-posh/themes/wholespace.omp.json | Invoke-Expression
+
+
