@@ -35,6 +35,23 @@ sudo dnf install powershell -y
 
 
 
+Add To .bashrc File
+------------------
+🔧 1. Add ~/.local/bin to Your PATH
+Add this line to your shell's environment config (this is separate from PowerShell):
+
+For Bash/Zsh/Fish etc. (Terminal-wide):
+If you're launching PowerShell from your terminal and it's not seeing oh-my-posh, run this:
+
+  $ echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+  $ source ~/.bashrc
+  
+  Now your system will recognize oh-my-posh.
+  You can test with:
+
+    $ which oh-my-posh
+  
+
 
 Setup Theme Configuraton:
 ------------------------
@@ -63,10 +80,17 @@ Pick a Nerd Font (e.g., FiraCode) and install it:
   Then change your terminal font (in settings) to one of the new Nerd Fonts, like:
     FiraCode Nerd Font Mono
 
-✅ 3. List Available Themes
+✅ 3. Check Themes
 
-    $ oh-my-posh get themes
+    a. List All Avaiable Themes:
+    
+        $ oh-my-posh get themes
+    
     This will list all available themes (e.g., jandedobbeleer, paradox, spaceship, etc.).
+
+    b. All Built-in Themes:
+    To see all the built-in themes:
+      $ ls ~/.cache/oh-my-posh/themes
 
 ✅ 4. Pick a Theme and Apply
 Choose a theme and test it:
