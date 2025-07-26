@@ -1,0 +1,107 @@
+Powershell Based Concepts 
+=========================
+
+Setup Powershell Package:
+------------------------
+Follow the url : https://learn.microsoft.com/en-us/powershell/scripting/install/install-rhel?view=powershell-7.5
+
+Or,
+
+###################################
+# Prerequisites
+
+# Get version of RHEL
+source /etc/os-release
+if [ ${VERSION_ID%.*} -lt 8 ]
+then majorver=7
+elif [ ${VERSION_ID%.*} -lt 9 ]
+then majorver=8
+else majorver=9
+fi
+
+# Download the Microsoft RedHat repository package
+curl -sSL -O https://packages.microsoft.com/config/rhel/$majorver/packages-microsoft-prod.rpm
+
+# Register the Microsoft RedHat repository
+sudo rpm -i packages-microsoft-prod.rpm
+
+# Delete the downloaded package after installing
+rm packages-microsoft-prod.rpm
+
+# Update package index files
+sudo dnf update
+# Install PowerShell
+sudo dnf install powershell -y
+
+
+
+
+Setup Theme Configuraton:
+------------------------
+
+Step-by-Step: Change PowerShell Theme with Oh My Posh on Fedora
+✅ 1. Install Oh My Posh
+You can install Oh My Posh using the official prebuilt binary:
+
+  $ sudo dnf install curl unzip fontconfig -y
+  $ curl -s https://ohmyposh.dev/install.sh | bash -s
+  
+  This installs the binary to:
+
+    $ ~/.poshthemes/oh-my-posh
+✅ 2. Install Nerd Fonts (for icons & symbols)
+Pick a Nerd Font (e.g., FiraCode) and install it:
+
+  $ mkdir -p ~/.local/share/fonts
+  $ cd ~/.local/share/fonts
+
+# Download a Nerd Font
+  $ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/FiraCode.zip
+  $ unzip FiraCode.zip
+  $ fc-cache -fv
+  
+  Then change your terminal font (in settings) to one of the new Nerd Fonts, like:
+    FiraCode Nerd Font Mono
+
+✅ 3. List Available Themes
+
+    $ oh-my-posh get themes
+    This will list all available themes (e.g., jandedobbeleer, paradox, spaceship, etc.).
+
+✅ 4. Pick a Theme and Apply
+Choose a theme and test it:
+
+  $ oh-my-posh init pwsh --config ~/.poshthemes/jandedobbeleer.omp.json | Invoke-Expression
+
+  If it looks good, make it load automatically every time PowerShell starts.
+
+✅ 5. Add to PowerShell Profile
+Edit your PowerShell profile:
+
+  $ code ~/.config/powershell/Microsoft.PowerShell_profile.ps1
+
+# or use nano/vim if you don't have VS Code
+Add the following line (replace with your theme path if different):
+
+  $ oh-my-posh init pwsh --config ~/.poshthemes/jandedobbeleer.omp.json | Invoke-Expression
+
+Save and restart pwsh.
+
+✅ 6. (Optional) Download All Themes
+
+  $ mkdir -p ~/.poshthemes
+  $ curl -s https://ohmyposh.dev/themes | jq -r '.[] | .url' | while read -r url; do wget -q "$url" -P ~/.poshthemes; done
+  $ chmod u+rw ~/.poshthemes/*.omp.json
+
+✅ Example: Clean Setup Summary
+
+# Install oh-my-posh
+  $ curl -s https://ohmyposh.dev/install.sh | bash -s
+
+# Apply theme temporarily
+  $ oh-my-posh init pwsh --config ~/.poshthemes/paradox.omp.json | Invoke-Expression
+
+# Make permanent
+  $ echo 'oh-my-posh init pwsh --config ~/.poshthemes/paradox.omp.json | Invoke-Expression' >> ~/.config/powershell/Microsoft.PowerShell_profile.ps1
+
+Let me know if you'd like to create a custom theme, or want a minimal, battery-saving or developer-focused prompt!
